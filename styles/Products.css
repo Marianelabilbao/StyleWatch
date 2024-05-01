@@ -1,0 +1,67 @@
+.marcas {
+    padding: 5px;
+}
+
+.marcas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    gap: 5px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+.marca img {
+    /* flex: 1; */
+    max-width: 50%;
+    height: auto;
+
+}
+
+.producto:hover {
+    transform: scale(110%,110%); /* se expande al pasar el mouse */
+    transition: transform 0.9s ease;
+}
+
+.caracteristicas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+
+}
+
+.caracteristicas ul {
+    padding: 0; /* Eliminamos el padding predeterminado */
+    margin: 0; /* Eliminamos el margin predeterminado */
+    list-style-type: none; /* Quitamos los estilos de lista */
+}
+
+.caracteristicas ul li {
+    margin-bottom: 10px; /* Añadimos espacio entre los elementos de la lista */
+    line-height: 1.5; /* Ajustamos el espaciado entre líneas */
+}
+/* Agregamos efecto de transición al filtro de la imagen */
+.caracteristicas img {
+    max-width: 40%;
+    height: auto;
+    margin-right: 20px;
+    filter: blur(5px); /* Aplicamos un desenfoque inicial */
+    transition: filter 0.5s ease; /* Transición para el desenfoque */
+}
+
+/* Eliminamos el desenfoque al pasar el mouse */
+.caracteristicas img:hover {
+    filter: none; /* Eliminamos el desenfoque */
+    transform: scale(1.1); /* Aumenta un poco el tamaño de la imagen */
+}
