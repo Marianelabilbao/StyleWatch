@@ -35,12 +35,15 @@ nav ul li a {
 }
 
 .banner {
-    background-image: url("banner.jpg");
+    width: 100%;
+    height: auto;
+    display: block;
+    /* background-image: url("banner.jpg");
     background-size: 100% 20%;
     background-position: center;
     height: 400px;
     text-align: center;
-    padding: 20px;
+    padding: 20px; */
 }
 
 .banner-text {
@@ -130,6 +133,7 @@ nav ul li a {
 }
 .producto img:hover {
   transform: scale(1.1);
+}
 
 footer {
     background-color: #333;
