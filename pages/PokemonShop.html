@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../src/index/icono.png">
+    <title>StyleWatch - Pokémon Shop </title>
+    <link rel="stylesheet" href="../styles/products.css">
+    <link rel="stylesheet" href="../styles/pokemon.css">
+</head>
+<body>
+    <header>
+        <h1>StyleWatch</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#marcas">Marcas</a></li>
+                <li><a href="#masbuscados">Más buscados</a></li>
+                <li><a href="../StyleWatch-main/pages/PokemonShop.html">Pokemon Shop</a></li>
+                <li><a href="../StyleWatch-main/pages/Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main>
+        <section>
+            <img src="../src/index/banner pokemon.png" class="banner" alt="Banner de StyleWatch">
+            <div class="banner-text">
+                <h2>Encuentra tu reloj perfecto</h2>
+                <p>StyleWatch tiene una amplia selección de relojes de las mejores marcas.</p>
+                <a href="../pages/Coleccion.html" class="btn">Explora nuestra colección</a>
+            </div>
+        </section>
+
+        <section class="marcas" id="marcas">
+            <h2>Marcas destacadas</h2>
+            <div class="marcas-grid">
+                <a href="#" class="marca">
+                    <img src="../src/index/tommyhilfiger.png" alt="Marca Tommy Hilfiger">
+                </a>
+                <a href="#" class="marca">
+                    <img src="../src/index/tissot.png" alt="Marca Tissot">
+                </a>
+                <a href="#" class="marca">
+                    <img src="../src/index/swatch.png" alt="Marca Swatch">
+                </a>
+                <a href="#" class="marca">
+                    <img src="../src/index/citizen.png" alt="Marca Citizen">
+                </a>
+                <a href="#" class="marca">
+                    <img src="../src/index/bulova.png" alt="Marca Bulova">
+                </a>
+                <a href="#" class="marca">
+                    <img src="../src/index/lacoste.png" alt="Marca Lacoste">
+                </a>
+                <a href="#" class="marca">
+                    <img src="../src/index/festina.png" alt="Marca Festina">
+                </a>
+                <a href="#" class="marca">
+                    <img src="../src/index/calvinklein.png" alt="Marca Calvin Klein">
+                </a>
+                <a href="#" class="marca">
+                    <img src="../src/index/swissmilitary.png" alt="Marca Swiss Military">
+                </a>
+            </div>
+        </section>   
+        <section class="iframe-section mt-5">
+            <h2>Atrapalos YA!</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Rsv2VkoIpk0?si=hL3G--YR112iwnGL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+                <section id="pokemon" class="pokemon-section">
+                    <div class="container">
+                        <h2>Elige tu Pokémon</h2>
+                        <select id="pokemon-select" class="form-control mb-3">
+                            <!-- Opciones de Pokémon se agregarán aquí dinámicamente con JavaScript -->
+                        </select>
+                        <button onclick="showSelectedPokemon()" class="btn btn-primary">Mostrar Pokémon</button>
+                        <div class="pokemon-grid mt-3">
+                            <!-- Las imágenes de los Pokémon seleccionados se mostrarán aquí -->
+                        </div>
+                    </div>
+                    <div class="watch-container mt-3 text-center">
+                        <img src="../src/reloj pokemon.png" class="watch-image img-fluid" alt="Reloj Pokemon">
+                    </div>
+                </section>
+        
+        <section class="productos" id="masbuscados">
+            <h2>Más buscados</h2>
+            <div class="productos-grid">
+                <div class="producto">
+                    <img src="../src/index/applewatch41mm.png" alt="Apple Watch 41mm">
+                    <h3>Apple Watch S9 41mm</h3>
+                    <p>Reloj GPS para actividades al aire libre con batería de larga duración y funciones avanzadas.</p>
+                    <a href="../pages/Apple Watch S9 41mm.html" class="btn">Ver más</a>
+                </div>
+                <div class="producto">
+                    <img src="../src/index/applewatch45mm.jpg" alt="Apple Watch 45mm">
+                    <h3>Apple Watch S9 45mm</h3>
+                    <p>Reloj GPS para actividades al aire libre con batería de larga duración y funciones avanzadas. Mayor tamaño.</p>
+                     <a href="../pages/Apple Watch 45mm Apple Watch S9 45mm.html" class="btn">Ver más</a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../JavaScript/Pokemon.js"></script>
+    <footer>
+        <p>&copy; 2024 StyleWatch</p>
+        <ul>
+            <li><a href="../pages/tyc.html" alt="términos y condiciones" class="tyc">Condiciones de uso</a></li>
+            <li><a href="../pages/Politicas de privacidad" alt="políticas de privacidad" class="tyc">Política de privacidad</a></li>
+        </ul>
+    </footer>
