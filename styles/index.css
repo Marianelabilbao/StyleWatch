@@ -133,7 +133,7 @@ nav ul li a {
     line-height: 1.6;
 }
 .producto img:hover {
-  transform: scale(2.2);
+  transform: scale(1.2);
 }
 
 footer {
