@@ -1,11 +1,11 @@
 .pokemon-section {
     text-align: center;
-    padding: 20px 0;
+    padding: 500px 0;
 }
 
 .pokemon-grid img,
 .watch-image {
-    width: 200px;
+    width: 500px;
     height: auto;
 }
 
