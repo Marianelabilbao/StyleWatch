@@ -5,13 +5,13 @@
 
 .pokemon-grid img,
 .watch-image {
-    width: 300px;
+    width: 200px;
     height: auto;
 }
 
 .iframe-section {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 footer {
     background-color: #faf606;
