@@ -37,9 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         // Obtener el iframe del video
         var iframe = document.getElementById('video');
-        // Modificar el src para añadir el parámetro autoplay=1
         var src = iframe.src;
         iframe.src = src + (src.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
-    }, 5000); // 5000 milisegundos = 5 segundos
+    }, 1000); // 1000 milisegundos = 1 segundos
 });
 
