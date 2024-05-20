@@ -148,3 +148,60 @@ footer {
     background-color: transparent;
     text-decoration: none;
 }
+/* Media queries para tablet */
+@media only screen and (max-width: 1023px) {
+    .marcas-grid,
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* Media queries para celular */
+@media only screen and (max-width: 767px) {
+    header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    .banner-text h2 {
+        font-size: 24px;
+    }
+
+    .banner-text p {
+        font-size: 14px;
+    }
+
+    .marcas-grid,
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .marca {
+        padding: 5px;
+    }
+
+    .marca img {
+        max-width: 80%;
+    }
+
+    .producto {
+        padding: 10px;
+    }
+
+    .producto img {
+        height: 150px;
+        margin-bottom: 5px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
