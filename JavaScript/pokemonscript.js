@@ -31,4 +31,15 @@ function showSelectedPokemon() {
     })
     .catch(error => console.error("Ocurrió un error al obtener el Pokémon:", error));
 }
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    // Esperar 5 segundos
+    setTimeout(function() {
+        // Obtener el iframe del video
+        var iframe = document.getElementById('video');
+        // Modificar el src para añadir el parámetro autoplay=1
+        var src = iframe.src;
+        iframe.src = src + (src.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
+    }, 5000); // 5000 milisegundos = 5 segundos
+});
 
