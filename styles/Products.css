@@ -19,15 +19,18 @@
 }
 
 .marca img {
-    /* flex: 1; */
     max-width: 50%;
     height: auto;
-
 }
 
-.producto:hover {
-    transform: scale(110%,110%); /* se expande al pasar el mouse */
+.producto:hover img {
+    transform: scale(110%,110%); /* se expande solo la imagen al pasar el mouse */
     transition: transform 0.9s ease;
+}
+
+.producto img {
+    max-width: 100%; /* Ajustamos el ancho máximo de la imagen al 100% del contenedor */
+    height: auto; /* Mantenemos la proporción de la imagen */
 }
 
 .caracteristicas {
@@ -38,7 +41,6 @@
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 2px;
-
 }
 
 .caracteristicas ul {
@@ -51,6 +53,7 @@
     margin-bottom: 10px; /* Añadimos espacio entre los elementos de la lista */
     line-height: 1.5; /* Ajustamos el espaciado entre líneas */
 }
+
 /* Agregamos efecto de transición al filtro de la imagen */
 .caracteristicas img {
     max-width: 40%;
