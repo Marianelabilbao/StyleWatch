@@ -143,11 +143,16 @@ footer {
     text-align: center;
 }
 
+ul {
+    list-style: none;
+}
+
 .tyc {
     color: none;
     background-color: transparent;
     text-decoration: none;
 }
+
 /* Media queries para tablet */
 @media only screen and (max-width: 1023px) {
     .marcas-grid,
