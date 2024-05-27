@@ -1,49 +1,61 @@
+// DOM - Asegura que todo esté cargado previo a ejecutarse
 document.addEventListener("DOMContentLoaded", function() {
+    //que elementos se van a manipular
     const form = document.getElementById("contactForm");
     const prefEmail = document.getElementById("prefEmail");
     const prefTelefono = document.getElementById("prefTelefono");
-    const emailField = document.getElementById("email");
-    const telefonoField = document.getElementById("telefono");
-    const nombreField = document.getElementById("nombre");
-    const motivoField = document.getElementById("motivo");
-    const mensajeField = document.getElementById("mensaje");
+    const email = document.getElementById("email");
+    const telefono = document.getElementById("telefono");
 
-    // Función para actualizar los atributos required de email y teléfono según la preferencia de contacto
-    function updateRequiredFields() {
-        if (prefEmail.checked) {
-            emailField.required = true;
-            telefonoField.required = false;
-        } else if (prefTelefono.checked) {
-            emailField.required = false;
-            telefonoField.required = true;
-        } else {
-            emailField.required = false;
-            telefonoField.required = false;
-        }
-    }
-
-    // Agregar eventos a las casillas de verificación para actualizar los campos requeridos
-    prefEmail.addEventListener("change", updateRequiredFields);
-    prefTelefono.addEventListener("change", updateRequiredFields);
-
-    // Agregar evento al envío del formulario
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Evitar que el formulario se envíe automáticamente
 
+        // Función para actualizar los atributos required, para que el usuario no deje el medio elegido en blanco
+        function updateRequiredFields() {
+            if (prefEmail.checked) {
+                email.required = true;
+                telefono.required = false;
+            } else if (prefTelefono.checked) {
+                email.required = false;
+                telefono.required = true;
+            } else {
+                email.required = false;
+                telefono.required = false;
+            }
+        }
+
+        // Agregar eventos a las casillas de verificación, para que sea requerido uno de los dos medios de contacto
+        prefEmail.addEventListener("change", updateRequiredFields);
+        prefTelefono.addEventListener("change", updateRequiredFields);
+
+        // Validar los campos del formulario
+        const nombre = document.getElementById("nombre").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const telefono = document.getElementById("telefono").value.trim();
+        const motivo = document.getElementById("motivo").value;
+        const mensaje = document.getElementById("mensaje").value.trim();
+
+        // Validar que los campos obligatorios no estén vacíos
+        if (nombre === "" || motivo === "" || mensaje === "") {
+            alert("Por favor, complete todos los campos obligatorios.");
+            return;
+        }
+
+        // Validar el formato del email utilizando una expresión regular simple
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)){
+            alert("Por favor, ingrese un correo electrónico válido.");
+            return;
+        }
+
         // Validar que al menos un medio de contacto esté seleccionado
         if (!prefEmail.checked && !prefTelefono.checked) {
-            alert("Por favor, elige al menos un medio de contacto: email o teléfono.");
-            return; // Detener el proceso de envío del formulario si no se selecciona ningún medio de contacto
+            alert("Por favor, seleccione al menos un medio de contacto: email o teléfono.");
+            return;
         }
 
-        // Validar que todos los campos obligatorios estén completados
-        if (nombreField.value.trim() === "" || motivoField.value.trim() === "" || mensajeField.value.trim() === "") {
-            alert("Por favor, complete todos los campos obligatorios.");
-            return; // Detener el proceso de envío del formulario si hay campos vacíos
-        }
-
-        // Si todos los campos son válidos, enviar el formulario
-        alert("Formulario enviado correctamente. ¡Gracias!");
+        // Si todos los campos son válidos, enviar el formulario (aquí puedes agregar el código para enviar el formulario a tu backend si lo tienes)
+        alert("Formulario enviado correctamente. ¡Gracias por contactar a StyleWatch!");
         form.reset(); // Limpiar el formulario después de enviarlo
     });
 });
