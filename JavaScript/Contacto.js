@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const prefTelefono = document.getElementById("prefTelefono");
     const emailField = document.getElementById("email");
     const telefonoField = document.getElementById("telefono");
+    const nombreField = document.getElementById("nombre");
+    const motivoField = document.getElementById("motivo");
+    const mensajeField = document.getElementById("mensaje");
 
     // Función para actualizar los atributos required de email y teléfono según la preferencia de contacto
     function updateRequiredFields() {
@@ -27,21 +30,16 @@ document.addEventListener("DOMContentLoaded", function() {
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Evitar que el formulario se envíe automáticamente
 
+        // Validar que todos los campos obligatorios estén completados
+        if (nombreField.value.trim() === "" || motivoField.value.trim() === "" || mensajeField.value.trim() === "") {
+            alert("Por favor, complete todos los campos obligatorios.");
+            return; // Detener el proceso de envío del formulario si hay campos vacíos
+        }
+
         // Validar que al menos uno de los campos requeridos esté completado
         if (!emailField.checkValidity() && !telefonoField.checkValidity()) {
             alert("Por favor, proporciona al menos un medio de contacto: email o teléfono.");
             return; // Detener el proceso de envío del formulario si no hay un medio de contacto válido
-        }
-
-        // Validar los campos del formulario
-        const nombre = document.getElementById("nombre").value.trim();
-        const motivo = document.getElementById("motivo").value.trim();
-        const mensaje = document.getElementById("mensaje").value.trim();
-
-        // Validar que los campos obligatorios no estén vacíos
-        if (nombre === "" || motivo === "" || mensaje === "") {
-            alert("Por favor, complete todos los campos obligatorios.");
-            return; // Detener el proceso de envío del formulario si hay campos vacíos
         }
 
         // Si todos los campos son válidos, enviar el formulario
