@@ -1,4 +1,4 @@
-//DOM  Asegura que todo esté cargado previo a ejecutarse
+// DOM: Asegura que todo esté cargado previo a ejecutarse
 document.addEventListener("DOMContentLoaded", function() {
     // Elementos a manipular
     const form = document.getElementById("contactForm");
@@ -27,8 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Agregar evento al envío del formulario
     form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Evitar que el formulario se envíe automáticamente
-
         // Validar los campos del formulario
         const nombre = document.getElementById("nombre").value.trim();
         const motivo = document.getElementById("motivo").value.trim();
@@ -37,20 +35,25 @@ document.addEventListener("DOMContentLoaded", function() {
         // Validar que los campos obligatorios no estén vacíos
         if (nombre === "" || motivo === "" || mensaje === "") {
             alert("Por favor, complete todos los campos obligatorios.");
+            event.preventDefault(); // Evitar que el formulario se envíe si hay campos vacíos
             return;
         }
 
-        // Validar el formato del email utilizando una expresión regular simple
-        const emailValue = email.value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (prefEmail.checked && !emailRegex.test(emailValue)) {
-            alert("Por favor, ingrese un correo electrónico válido.");
-            return;
+        // Verificar el formato del correo electrónico solo si el usuario ha seleccionado la opción de contacto por correo electrónico
+        if (prefEmail.checked) {
+            const emailValue = email.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailValue)) {
+                alert("Por favor, ingrese un correo electrónico válido.");
+                event.preventDefault(); // Evitar que el formulario se envíe si el correo electrónico no es válido
+                return;
+            }
         }
 
         // Verificar que al menos uno de los campos requeridos esté completado
         if (!email.checkValidity() && !telefono.checkValidity()) {
             alert("Por favor, proporciona al menos un medio de contacto: email o teléfono.");
+            event.preventDefault(); // Evitar que el formulario se envíe si no hay un medio de contacto válido
             return;
         }
 
