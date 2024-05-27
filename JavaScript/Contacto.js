@@ -30,16 +30,16 @@ document.addEventListener("DOMContentLoaded", function() {
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Evitar que el formulario se envíe automáticamente
 
+        // Validar que al menos un medio de contacto esté seleccionado
+        if (!prefEmail.checked && !prefTelefono.checked) {
+            alert("Por favor, elige al menos un medio de contacto: email o teléfono.");
+            return; // Detener el proceso de envío del formulario si no se selecciona ningún medio de contacto
+        }
+
         // Validar que todos los campos obligatorios estén completados
         if (nombreField.value.trim() === "" || motivoField.value.trim() === "" || mensajeField.value.trim() === "") {
             alert("Por favor, complete todos los campos obligatorios.");
             return; // Detener el proceso de envío del formulario si hay campos vacíos
-        }
-
-        // Validar que al menos uno de los campos requeridos esté completado
-        if (!emailField.checkValidity() && !telefonoField.checkValidity()) {
-            alert("Por favor, proporciona al menos un medio de contacto: email o teléfono.");
-            return; // Detener el proceso de envío del formulario si no hay un medio de contacto válido
         }
 
         // Si todos los campos son válidos, enviar el formulario
