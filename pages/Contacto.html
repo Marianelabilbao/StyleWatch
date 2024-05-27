@@ -55,18 +55,25 @@
                     <label for="imagen">Adjuntar imagen:</label>
                     <input type="file" id="imagen" name="imagen">
                 </div>
-                <div class="Preferencias-contacto">
-                        <label>Preferencias de contacto:</label>
-                  <div class="preference"> <!-- Contenedor adicional -->
+                 <div class="Preferencias-contacto">
+                    <label>Preferencias de contacto:</label>
+                    <div class="preference">
                         <label for="prefEmail">Email</label>
                         <input type="checkbox" name="Email" id="prefEmail" value="email"/>
                     </div>
-                    <div class="preference"> <!-- Contenedor adicional -->
+                    <div class="preference">
                         <label for="prefTelefono">Teléfono</label>
                         <input type="checkbox" id="prefTelefono" name="prefContacto" value="telefono">
                     </div>
                 </div>
-                
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" autocomplete="tel" required>
+                </div>
                 <div class="botones">
                     <input class="button" type="reset" value="Limpiar formulario">
                     <input class="button" type="submit" value="Enviar">
