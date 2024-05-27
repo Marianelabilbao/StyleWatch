@@ -18,16 +18,15 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateRequiredFields() {
         if (prefEmail.checked) {
             email.required = true;
-        } else {
+            telefono.required = false;
+        } else if (prefTelefono.checked) {
             email.required = false;
-        }
-
-        if (prefTelefono.checked) {
             telefono.required = true;
         } else {
+            email.required = false;
             telefono.required = false;
         }
-    }
+        
         // Validar los campos del formulario
         const nombre = document.getElementById("nombre").value.trim();
         const email = document.getElementById("email").value.trim();
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const mensaje = document.getElementById("mensaje").value.trim();
 
         // Validar que los campos obligatorios no estén vacíos
-        if (!nombre === "" || !email === "" || !motivo === "" || !mensaje === "") {
+        if (!nombre === "" || !motivo === "" || !mensaje === "") {
             Alert("Por favor, complete todos los campos obligatorios.")
             return;
         }
@@ -46,6 +45,12 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Por favor, ingrese un correo electrónico válido.")
             return;
         }
+        if (!email.checkValidity() && !telefono.checkValidity()) {
+            event.preventDefault(); // Evitar que el formulario se envíe si no hay un medio de contacto válido
+            alert("Por favor, proporciona al menos un medio de contacto: email o teléfono.");
+        }
+    });
+});
 
         // Si todos los campos son válidos, enviar el formulario (aquí puedes agregar el código para enviar el formulario a tu backend si lo tienes)
         alert ("Formulario enviado correctamente. Muchas Gracias.");
