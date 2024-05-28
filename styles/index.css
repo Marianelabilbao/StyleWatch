@@ -38,12 +38,6 @@ nav ul li a {
     width: 100%;
     height: auto;
     display: block;
-    /* background-image: url("banner.jpg");
-    background-size: 100% 20%;
-    background-position: center;
-    height: 400px;
-    text-align: center;
-    padding: 20px; */
 }
 
 .banner-text {
@@ -90,13 +84,12 @@ nav ul li a {
 }
 
 .marca img {
-    /* flex: 1; */
     max-width: 100%;
     height: auto;
 
 }
 .marca:hover {
-    transform: rotateY(360deg); /* Rota 360 grados horizontalmente al pasar el mouse */
+    transform: rotateY(360deg);
     transition: transform 0.9s ease;
 }
 .productos {
@@ -153,7 +146,6 @@ ul {
     text-decoration: none;
 }
 
-/* Media queries para tablet */
 @media only screen and (max-width: 1023px) {
     .marcas-grid,
     .productos-grid {
@@ -161,7 +153,6 @@ ul {
     }
 }
 
-/* Media queries para celular */
 @media only screen and (max-width: 767px) {
     header {
         padding: 10px;

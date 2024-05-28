@@ -10,8 +10,8 @@
 .formulario {
     width: 50%;
     margin: 10%;
-    animation: fadeIn 3s ease-in-out; /* Aplica animación de fadeIn */
-    background-color: #dfdcdc; /* Color de fondo inicial */
+    animation: fadeIn 3s ease-in-out;
+    background-color: #dfdcdc;
   }
    
 .formulario label {
@@ -68,7 +68,6 @@
 }
 
 
-/* Media queries para tablet */
 @media only screen and (max-width: 1023px) {
     .formulario {
         width: 70%;
@@ -82,7 +81,6 @@
     }
 }
 
-/* Media queries para celular */
 @media only screen and (max-width: 767px) {
     .formulario {
         width: 90%;
@@ -95,7 +93,7 @@
         margin-right: 10px;
     }
 };
-/* Media queries para tablet */
+
 @media only screen and (max-width: 1023px) {
     .formulario {
         width: 70%;
@@ -117,7 +115,6 @@
     }
 }
 
-/* Media queries para celular */
 @media only screen and (max-width: 767px) {
     .formulario {
         width: 90%;
