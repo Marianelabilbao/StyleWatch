@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("contactForm");
     const prefEmail = document.getElementById("prefEmail");
@@ -6,28 +5,28 @@ document.addEventListener("DOMContentLoaded", function() {
     const email = document.getElementById("email");
     const telefono = document.getElementById("telefono");
 
+    function updateRequiredFields() {
+        if (prefEmail.checked) {
+            email.required = true;
+            telefono.required = false;
+        } else if (prefTelefono.checked) {
+            email.required = false;
+            telefono.required = true;
+        } else {
+            email.required = false;
+            telefono.required = false;
+        }
+    }
+
+    prefEmail.addEventListener("change", updateRequiredFields);
+    prefTelefono.addEventListener("change", updateRequiredFields);
+
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
-        function updateRequiredFields() {
-            if (prefEmail.checked) {
-                email.required = true;
-                telefono.required = false;
-            } else if (prefTelefono.checked) {
-                email.required = false;
-                telefono.required = true;
-            } else {
-                email.required = false;
-                telefono.required = false;
-            }
-        }
-
-        prefEmail.addEventListener("change", updateRequiredFields);
-        prefTelefono.addEventListener("change", updateRequiredFields);
-
         const nombre = document.getElementById("nombre").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const telefono = document.getElementById("telefono").value.trim();
+        const emailValue = document.getElementById("email").value.trim();
+        const telefonoValue = document.getElementById("telefono").value.trim();
         const motivo = document.getElementById("motivo").value;
         const mensaje = document.getElementById("mensaje").value.trim();
 
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)){
+        if (email.required && !emailRegex.test(emailValue)) {
             alert("Por favor, ingrese un correo electrónico válido.");
             return;
         }
