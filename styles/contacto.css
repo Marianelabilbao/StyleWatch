@@ -52,7 +52,8 @@
 .formulario .botones input[type="submit"],
 .formulario select
 {
-    padding: 10px 20px; 
+    padding: 20px 35px;
+    font-size:1.2em
     margin-top: 20px;
     margin-right: 30px; 
     border: 1x solid  #333;
