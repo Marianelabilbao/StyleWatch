@@ -8,7 +8,7 @@
 }
 
 .formulario {
-    width: 30%;
+    width: 60%;
     margin: auto;
     animation: fadeIn 3s cubic-bezier(1, 0.08, 0, 1.11); 
     border-radius: 10px;
