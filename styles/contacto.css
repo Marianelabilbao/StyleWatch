@@ -24,7 +24,7 @@
 .formulario input[type="tel"],
 .formulario textarea,
 .formulario select {
-    width: calc(100% - 20px);
+    width: calc(100% - 30px);
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid  #333;
@@ -32,7 +32,7 @@
 }
 
 .preferencias-contacto {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
    }
 
 .preferencias-contacto label {
@@ -45,7 +45,7 @@
 
 .opciones-contacto label {
   
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .formulario .botones input[type="reset"],
