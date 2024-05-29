@@ -33,7 +33,7 @@
         </section>
         <section class="formulario">
             <h2>Formulario de Contacto</h2>
-            <form id="contactForm">
+             <form id="contactForm" class="formulario">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
 
@@ -48,24 +48,29 @@
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" required autocomplete="off"></textarea>
 
-        <label for="contacto">Preferencia de contacto:</label>
-        <div>
-            <input type="checkbox" id="prefEmail" name="prefEmail" value="email">
-            <label for="prefEmail">Email:</label>
-            <input type="email" id="email" name="email">
-        </div>
-        <div>
-            <input type="checkbox" id="prefTelefono" name="prefTelefono" value="telefono">
-            <label for="prefTelefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono">
+        <div class="preferencias-contacto">
+            <label for="contacto">Preferencia de contacto:</label>
+            <div class="opciones-contacto">
+                <input type="checkbox" id="prefEmail" name="prefEmail" value="email">
+                <label for="prefEmail">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="opciones-contacto">
+                <input type="checkbox" id="prefTelefono" name="prefTelefono" value="telefono">
+                <label for="prefTelefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
         </div>
 
         <label for="imagen">Subir Imagen:</label>
         <input type="file" id="imagen" name="imagen" accept="image/*">
 
-        <button type="submit">Enviar</button>
-        <button type="button" id="limpiar">Limpiar</button>
+        <div class="botones">
+            <input type="submit" value="Enviar">
+            <input type="reset" id="limpiar" value="Limpiar">
+        </div>
     </form>
+
         </section>
     </main>
 
