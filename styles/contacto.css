@@ -8,13 +8,11 @@
 }
 
 .formulario {
-    width: 60%;
-    margin: 5% auto;
-    animation: fadeIn 3s ease-in-out;
-    background-color: #dfdcdc;
-    padding: 20px;
+    width: 30%;
+    margin: auto;
+    animation: fadeIn 3s cubic-bezier(1, 0.08, 0, 1.11); 
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .formulario label {
