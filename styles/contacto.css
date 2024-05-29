@@ -12,8 +12,8 @@
     margin: 10%;
     animation: fadeIn 3s ease-in-out;
     background-color: #dfdcdc;
-  }
-   
+}
+
 .formulario label {
     display: block;
     margin-bottom: 20px;
@@ -27,73 +27,44 @@
     width: calc(100% - 25px);
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid  #333;
+    border: 1px solid #333;
     border-radius: 5px;
 }
 
 .preferencias-contacto {
     margin-bottom: 15px;
-   }
+}
 
 .preferencias-contacto label {
-    display: block; 
+    display: block;
 }
 
 .opciones-contacto {
-    display: flex;  
+    display: flex;
 }
 
 .opciones-contacto label {
-  
     margin-right: 15px;
 }
 
 .formulario .botones input[type="reset"],
-.formulario .botones input[type="submit"],
-.formulario select
-{
-    padding: 20px 35px;
-    font-size:1.2em
+.formulario .botones input[type="submit"] {
+    padding: 15px 30px;
+    font-size: 1.2em;
     margin-top: 20px;
-    margin-right: 30px; 
-    border: 1x solid  #333;
+    margin-right: 30px;
+    border: 1px solid #333;
     border-radius: 5px;
-    background-color:  #333;
+    background-color: #333;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .formulario .botones input[type="reset"]:hover,
 .formulario .botones input[type="submit"]:hover {
-    background-color: #0000FF
+    background-color: #0000FF;
 }
-
-
-@media only screen and (max-width: 1023px) {
-    .formulario {
-        width: 70%;
-        margin: 7%;
-    }
-
-    .formulario .botones input[type="reset"],
-    .formulario .botones input[type="submit"],
-    .formulario select {
-        margin-right: 20px;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .formulario {
-        width: 90%;
-        margin: 5%;
-    }
-
-    .formulario .botones input[type="reset"],
-    .formulario .botones input[type="submit"],
-    .formulario select {
-        margin-right: 20px;
-    }
-};
 
 @media only screen and (max-width: 1023px) {
     .formulario {
@@ -110,8 +81,7 @@
     }
 
     .formulario .botones input[type="reset"],
-    .formulario .botones input[type="submit"],
-    .formulario select {
+    .formulario .botones input[type="submit"] {
         margin-right: 20px;
     }
 }
@@ -131,8 +101,7 @@
     }
 
     .formulario .botones input[type="reset"],
-    .formulario .botones input[type="submit"],
-    .formulario select {
+    .formulario .botones input[type="submit"] {
         margin-right: 10px;
     }
 }
