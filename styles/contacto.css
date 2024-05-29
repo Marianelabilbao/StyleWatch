@@ -8,8 +8,9 @@
 }
 
 .formulario {
-    width: 60%;
-    margin: 5% auto;
+    width: auto;
+    margin: 5%;
+    margin-top: 30px;
     animation: fadeIn 3s ease-in-out;
     background-color: #dfdcdc;
     padding: 20px;
@@ -19,7 +20,7 @@
 
 .formulario label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
     font-weight: bold;
 }
 
@@ -30,7 +31,7 @@
 .formulario select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     border: 1px solid #333;
     border-radius: 5px;
 }
@@ -64,6 +65,7 @@
     padding: 10px 20px;
     font-size: 16px;
     margin-right: 20px;
+    margin-top: 25px;
     border: 1px solid #333;
     border-radius: 5px;
     background-color: #333;
