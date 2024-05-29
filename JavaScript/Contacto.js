@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const prefTelefono = document.getElementById("prefTelefono");
     const email = document.getElementById("email");
     const telefono = document.getElementById("telefono");
+    const limpiar = document.getElementById("limpiar");
 
     function updateRequiredFields() {
         if (prefEmail.checked) {
@@ -48,5 +49,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         alert("Formulario enviado correctamente. ¡Gracias por contactar a StyleWatch!");
         form.reset();
+    });
+
+    limpiar.addEventListener("click", function() {
+        form.reset();
+        updateRequiredFields();
     });
 });
