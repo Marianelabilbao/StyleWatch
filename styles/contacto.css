@@ -11,8 +11,8 @@
     width: auto;
     margin: 5%;
     margin-top: 30px;
-    animation: fadeIn 3s ease-in-out;
-    background-color: #dfdcdc;
+    animation: fadeIn 3s ease-in-out; /* Aplica animación de fadeIn */
+    background-color: #dfdcdc; /* Color de fondo inicial */
     padding: 20px;
     border-radius: 10px;
 
@@ -79,6 +79,7 @@
     background-color: #0000FF;
 }
 
+/* Media queries para tablet */
 @media only screen and (max-width: 1023px) {
     .formulario {
         width: 80%;
@@ -91,6 +92,7 @@
     }
 }
 
+/* Media queries para celular */
 @media only screen and (max-width: 767px) {
     .formulario {
         width: 95%;

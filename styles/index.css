@@ -89,7 +89,7 @@ nav ul li a {
 
 }
 .marca:hover {
-    transform: rotateY(360deg);
+    transform: rotateY(360deg); /* Rota 360 grados horizontalmente al pasar el mouse */
     transition: transform 0.9s ease;
 }
 .productos {
@@ -146,6 +146,7 @@ ul {
     text-decoration: none;
 }
 
+/* Media queries para tablet */
 @media only screen and (max-width: 1023px) {
     .marcas-grid,
     .productos-grid {
@@ -153,6 +154,7 @@ ul {
     }
 }
 
+/* Media queries para celular */
 @media only screen and (max-width: 767px) {
     header {
         padding: 10px;
