@@ -125,6 +125,7 @@ nav ul li a {
     font-size: 14px;
     line-height: 1.6;
 }
+
 .producto img:hover {
   transform: scale(1.2);
 }
